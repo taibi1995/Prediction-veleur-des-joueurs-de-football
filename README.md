@@ -42,10 +42,7 @@ pip install -r requirements.txt
 # Lancer Jupyter Notebook
 jupyter notebook
 
-# Ouvrir les notebooks dans cet ordre:
-# 1. Prediction_value_players.ipynb - Modèle principal
-# 2. Visualisation_value_players.ipynb - Visualisations et insights
-```
+
 
 ## 📂 Structure du Projet
 
