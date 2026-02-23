@@ -1,74 +1,27 @@
-# Prédiction de la Valeur des Joueurs de Football ⚽
+# Prediction — Football Players Market Value
 
-## 📌 Description
-Ce projet utilise le Machine Learning pour prédire la valeur marketante des joueurs de football basée sur leurs statistiques de performance et caractéristiques.
+Professional code to predict football players market value from performance features.
 
-## 🎯 Objectif Principal
-- Développer un modèle de régression capable de prédire la valeur des joueurs
-- Analyser les facteurs qui influencent le plus la valeur d'un joueur
-- Créer des visualisations pour les insights
+Features
+- Clean data processing and feature engineering
+- Regression models with scikit-learn
+- Evaluation reports and visualizations
 
-## 📊 Données
-- **Caractéristiques**: Performance, statistiques, position, âge, etc.
-
-## 🛠️ Technologies Utilisées
-- **Python 3.8+**
-- **Jupyter Notebook**
-- **Pandas** - Manipulation des données
-- **NumPy** - Calculs numériques
-- **Scikit-learn** - Modèles ML
-- **Matplotlib / Seaborn** - Visualisations
-
-## 📥 Installation
-
+Installation
 ```bash
-# Cloner le repository
-git clone https://github.com/taibi1995/Prediction-valeur-des-joueurs-de-football.git
-cd Prediction-valeur-des-joueurs-de-football
-
-# Créer un environnement virtuel
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# ou
-venv\Scripts\activate  # Windows
-
-# Installer les dépendances
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 📖 Utilisation
-
+Usage
 ```bash
-# Lancer Jupyter Notebook
-jupyter notebook
-
-# Ouvrir les notebooks dans cet ordre:
-# 1. Prediction_value_players.ipynb - Modèle principal
-# 2. Visualisation_value_players.ipynb - Visualisations et insights
+jupyter notebook Prediction_value_players.ipynb
 ```
 
-## 📂 Structure du Projet
-
-```
-.
-├── Prediction_value_players.ipynb      # Modèle de prédiction
-├── Visualisation_value_players.ipynb   # Visualisations et analyses
-├── projet ia.pdf                        # Documentation
-├── requirements.txt                     # Dépendances
-├── .gitignore                          # Fichiers à ignorer
-└── README.md                           # Ce fichier
-```
-
-## 📚 Références
-
-- [Scikit-learn Documentation](https://scikit-learn.org)
-- [Pandas Documentation](https://pandas.pydata.org)
-
-## 📝 Licence
-
+License
 MIT License
 
-## 👨‍💻 Auteur
+Author
+Younes Taibi — https://github.com/taibi1995
 
-**Younes Taibi**
-- GitHub: [@taibi1995](https://github.com/taibi1995)
