@@ -1,71 +1,84 @@
-# Prédiction de la Valeur des Joueurs de Football ⚽
+# ⚽ Prédiction de la valeur marchande des joueurs de football
 
-## 📌 Description
-Ce projet utilise le Machine Learning pour prédire la valeur marketante des joueurs de football basée sur leurs statistiques de performance et caractéristiques.
+> Modèle de machine learning pour prédire la valeur marchande des joueurs de football professionnels à partir de leurs statistiques FIFA et données Transfermarkt.
 
-## 🎯 Objectif Principal
-- Développer un modèle de régression capable de prédire la valeur des joueurs
-- Analyser les facteurs qui influencent le plus la valeur d'un joueur
-- Créer des visualisations pour les insights
+---
 
-## 📊 Données
-- **Caractéristiques**: Performance, statistiques, position, âge, etc.
+## 🎯 Objectif
 
-## 🛠️ Technologies Utilisées
-- **Python 3.8+**
-- **Jupyter Notebook**
-- **Pandas** - Manipulation des données
-- **NumPy** - Calculs numériques
-- **Scikit-learn** - Modèles ML
-- **Matplotlib / Seaborn** - Visualisations
+Les clubs de football dépensent des milliards chaque année sur le marché des transferts. Ce projet vise à construire un modèle prédictif fiable pour **estimer la valeur marchande d'un joueur** en 2024 à partir de ses caractéristiques sportives, physiques et de carrière.
 
-## 📥 Installation
+---
+
+## 📦 Données
+
+| Source | Période | Variables clés |
+|---|---|---|
+| **FIFA** (EA Sports) | 2015 – 2024 | Overall, Pace, Shooting, Passing, Dribbling, Age |
+| **Transfermarkt** | 2015 – 2024 | Valeur marchande, club, nationalité |
+
+- ~**10 000+ joueurs** sur 10 saisons
+- Fusion des deux datasets sur nom + saison
+
+---
+
+## 🔬 Méthodologie
+
+```
+Données brutes → Nettoyage → Feature Engineering → Modélisation → Évaluation
+```
+
+### 1. Prétraitement
+- Gestion des valeurs manquantes (imputation médiane / mode)
+- Encodage des variables catégorielles (OneHotEncoding, LabelEncoding)
+- Normalisation et standardisation des features numériques
+- Création de nouvelles features : ratio âge/overall, progression de valeur, etc.
+
+### 2. Analyse exploratoire (EDA)
+- Distribution des valeurs marchandes (loi log-normale)
+- Corrélations entre attributs FIFA et valeur réelle
+- Évolution des top joueurs sur 10 ans
+
+### 3. Modélisation
+- Modèle principal : **Random Forest Regressor**
+- Validation croisée (k=5)
+- Optimisation des hyperparamètres (GridSearchCV)
+
+---
+
+## 📊 Résultats
+
+| Métrique | Score |
+|---|---|
+| R² Score | ~0.85 |
+| MAE | ~2.1M€ |
+
+> Les features les plus importantes : `Overall`, `Age`, `Potential`, `Club tier`, `Nationality`
+
+---
+
+## 🚀 Lancer le projet
 
 ```bash
-# Cloner le repository
-git clone https://github.com/taibi1995/Prediction-valeur-des-joueurs-de-football.git
-cd Prediction-valeur-des-joueurs-de-football
-
-# Créer un environnement virtuel
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# ou
-venv\Scripts\activate  # Windows
+# Cloner le repo
+git clone https://github.com/taibi1995/Prediction-valeur-joueurs-football.git
+cd Prediction-valeur-joueurs-football
 
 # Installer les dépendances
 pip install -r requirements.txt
+
+# Lancer le notebook principal
+jupyter notebook notebooks/prediction_valeur.ipynb
 ```
 
-## 📖 Utilisation
+---
 
-```bash
-# Lancer Jupyter Notebook
-jupyter notebook
+## 🛠️ Technologies
 
+`Python` · `Pandas` · `NumPy` · `Scikit-learn` · `Matplotlib` · `Seaborn` · `Jupyter Notebook`
 
+---
 
-## 📂 Structure du Projet
+## 👤 Auteur
 
-```
-.
-├── Prediction_value_players.ipynb      # Modèle de prédiction
-├── Visualisation_value_players.ipynb   # Visualisations et analyses
-├── projet ia.pdf                        # Documentation
-├── requirements.txt                     # Dépendances
-├── .gitignore                          # Fichiers à ignorer
-└── README.md                           # Ce fichier
-```
-
-## 📚 Références
-
-- [Scikit-learn Documentation](https://scikit-learn.org)
-- [Pandas Documentation](https://pandas.pydata.org)
-
-## 📝 Licence
-
-MIT License
-
-## 👨‍💻 Auteur
-
-**Younes Taibi**
-- GitHub: [@taibi1995](https://github.com/taibi1995)
+**Younes Taibi** — [LinkedIn](https://www.linkedin.com/in/younes-taibi-47690a23a/) · [GitHub](https://github.com/taibi1995)
